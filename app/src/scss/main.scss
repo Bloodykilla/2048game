@@ -1,0 +1,149 @@
+
+$bc-color:#E1E8EB;
+$game-grid:#948C9E;
+$game-cell:#9C9C9C;
+$game-cell-active:#B5B3B8;
+$text-color:#4E4D4D;
+$font:'Segoe UI';
+$font-regular:25px;
+$font-black:60px;
+$font-small:15px;
+$br-radius:7px;
+$text-title:40px;
+
+* {
+  padding:0;
+  margin:0;
+  line-height: 20px;
+  letter-spacing: 25;
+}
+body {
+  background-color: #E1E8EB;
+  height:100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:$text-color;
+  font-family: $font;
+  font-size:$font-regular;
+    .body-container {
+      width:960px;
+
+        .area {
+          display: flex;
+          justify-content: space-around;
+          .game {
+            display: flex;
+            flex-direction: column;
+
+            &__top {
+              display: flex;
+              justify-content: space-between;
+              padding-bottom: 15px;
+              align-items: center;
+              
+          }
+            &__scores {
+              height:auto;
+              display: flex;
+              justify-content: space-between;
+
+              .scores, .best-scores {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                background-color: #fff;
+                border-radius:$br-radius;
+                font-size: $font-small;
+                padding: 2px;
+                margin:0 10px;
+                width:112px;
+              }
+          }
+
+          &__grid {
+            width:440px;
+            height:440px;
+            margin:10px 0 ;
+            padding: 10px;
+            background-color: $game-grid;
+            border-radius: $br-radius;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-gap:10px;
+            position: relative;
+          }
+
+          &__cell {
+            background-color: $game-cell;
+            width:102px;
+            height:102px;
+            border-radius: $br-radius;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 50px;
+
+
+              &--active {
+                border-radius: $br-radius;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                font-size: 50px;
+                font-weight: bold;
+                color:#fff;
+                background-color: $game-cell-active;
+                position:absolute;
+                width:102px;
+                height:102px;
+              }
+          }
+          &__button {
+            display:flex;
+            justify-content: center;
+          }
+
+        }
+         .text {
+          
+           display: flex;
+           flex-direction: column;
+           
+           padding:0 55px;
+
+           &__title {
+            font-size: $text-title;
+            font-weight:bold;
+            text-transform: uppercase;
+            padding-bottom: 35px;
+            text-align:left;
+
+            span {
+              text-align: left;
+            }
+          }
+
+          &__area {
+            text-align:left;
+
+             p{
+              line-height:40px;
+
+             }
+
+             p:last-child {
+               padding-top:40px;
+             }
+          }
+         }
+        .title {
+          font-weight:900;
+          font-size: $font-black;
+        }
+    }
+  }
+}
+

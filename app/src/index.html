@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>2048 GAME!</title>
+   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
+ </head>
+ <body>
+    <div class="body-container">
+      <div class="area">
+          <div class="game">
+              <div class="game__top">
+                <span class="title">2048</span>
+                <div class="game__scores">
+                  <div class="scores">Scores
+                    <span class="increment">0</span>
+                  </div>
+                  <div class="best-scores">Best scores
+                    <span class="increment__best"> 0 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="game__grid">
+                <div class="game__cell">
+
+                </div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+                <div class="game__cell">
+ 
+                </div>
+                <div class="game__cell"></div>
+                <div class="game__cell"></div>
+
+              </div>
+              <div class="game__button">
+                <div class="btn-container">
+                  <button class="reset" onClick=reloadWindow()>Reset</button>
+                </div>
+              </div>
+          </div>
+          <div class="text">
+            <div class="text__title">
+                <span>how to play:</span>
+                </div>
+                <div class="text__area">
+                  <p>Use arrow keys to move lines. When two tiles with the same number touch each other, they combine into one.</p>
+                    
+
+                    <p>This game is the explanation of algorithm of the original game, created with using JS.</p>
+                      
+                </div>
+            </div>
+            
+          </div>
+      </div>
+    </div>
+    <script>
+      let reloadWindow = () => {
+        location.reload();
+        return false;
+      }
+    </script>
+   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry%>" type="module"></script>
+
+ </body>
+</html>
